@@ -13,3 +13,14 @@ k3d cluster create kafka-scylladb-cluster --api-port 6550 -p "8080:80@loadbalanc
 k config get-contexts
 ```
 
+## 2. How to k8s create namespace & Kafka cluster on k8s cluster
+
+[Quickstarts](https://strimzi.io/quickstarts/)
+
+```shell
+kubectl create namespace kafka
+kubectl create -f 'https://strimzi.io/install/latest?namespace=kafka' -n kafka
+
+kubectl apply -f https://strimzi.io/examples/latest/kafka/kraft/kafka-single-node.yaml -n kafka
+```
+

@@ -1,0 +1,3 @@
+[submodule "scylla-operator"]
+	path = scylla-operator
+	url = git@github.com:scylladb/scylla-operator.git
